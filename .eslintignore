@@ -1,0 +1,14 @@
+build/*
+dist/*
+/public
+node_modules
+/lib
+/deploy
+/db
+/log
+/config
+/bin
+/app/concepts
+/app/controllers
+/app/models
+/app/serializers

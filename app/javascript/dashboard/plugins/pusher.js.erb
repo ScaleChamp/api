@@ -1,0 +1,32 @@
+import Pusher from 'pusher-js'
+import Cookie from 'js-cookie'
+
+Pusher.logToConsole = process.env.NODE_ENV !== 'production'
+
+export default {
+  install (Vue) {
+    const headers = {}
+    Object.defineProperty(headers, 'X-CSRF-Token', {
+      enumerable: true,
+      get () {
+        return Cookie.get('_csrf_token')
+      }
+    })
+    let pusher = null
+    Object.defineProperty(Vue.prototype, '$pusher', {
+      get () {
+        if (!pusher) {
+          pusher = new Pusher(<%= Rails.application.credentials.fetch(:pusher_key).to_json %>, {
+            cluster: 'eu',
+            authEndpoint: '/api/v1/pusher',
+            forceTLS: process.env.NODE_ENV === 'production',
+            auth: {
+              headers
+            }
+          })
+        }
+        return pusher
+      }
+    })
+  }
+}

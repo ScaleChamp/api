@@ -1,0 +1,39 @@
+{
+  "name": "scalechamp",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "@rails/webpacker": "5.2.1",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "1.1.2",
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.20.0",
+    "chart.js": "^2.9.3",
+    "chartjs-plugin-colorschemes": "^0.4.0",
+    "dayjs": "^1.9.1",
+    "js-cookie": "^2.2.1",
+    "parse-link-header": "^1.0.1",
+    "pusher-js": "^7.0.0",
+    "qrcode.vue": "^1.7.0",
+    "rails-erb-loader": "^5.5.2",
+    "readable-bytes": "^1.0.4",
+    "tailwindcss": "^1.7.6",
+    "vue": "^2.6.12",
+    "vue-analytics": "^5.22.1",
+    "vue-i18n": "^8.21.1",
+    "vue-loader": "^15.9.3",
+    "vue-router": "^3.4.5",
+    "vue-template-compiler": "^2.6.12",
+    "vuelidate": "^0.7.5",
+    "vuex": "^3.5.1",
+    "vuexi": "^1.2.5"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

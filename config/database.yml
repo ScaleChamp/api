@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 3 } %>
+development:
+  primary:
+    <<: *default
+    url: <%= Rails.application.credentials.fetch(:database_url) %>
+test:
+  primary:
+    <<: *default
+    url: <%= Rails.application.credentials.fetch(:database_url) %>
+production:
+  primary:
+    <<: *default
+    url: <%= Rails.application.credentials.fetch(:database_url) %>

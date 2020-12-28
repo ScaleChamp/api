@@ -1,0 +1,48 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3919637, 2020-06-27T18:09:24-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Gilroy-SemiBold by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/semi-bold/
+ *
+ * Webfont: Gilroy-Regular by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular/
+ *
+ *
+ * Webfonts copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * © 2020 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3bcf15");
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/webFonts/Gilroy-SemiBold/font.eot');
+  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+  url('/webFonts/Gilroy-SemiBold/font.eot?#iefix') format('embedded-opentype'),
+  url('/webFonts/Gilroy-SemiBold/font.woff2') format('woff2'),
+  url('/webFonts/Gilroy-SemiBold/font.woff') format('woff'),
+  url('/webFonts/Gilroy-SemiBold/font.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/webFonts/Gilroy-Regular/font.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+  url('/webFonts/Gilroy-Regular/font.eot?#iefix') format('embedded-opentype'),
+  url('/webFonts/Gilroy-Regular/font.woff2') format('woff2'),
+  url('/webFonts/Gilroy-Regular/font.woff') format('woff'),
+  url('/webFonts/Gilroy-Regular/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

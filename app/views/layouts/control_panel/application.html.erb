@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="dns-prefetch" href="https://cdn.paddle.com/">
+  <link rel="dns-prefetch" href="https://hello.myfonts.net/">
+  <link rel="dns-prefetch" href="https://avatars.dicebear.com/">
+  <meta name="description" content="ScaleChamp Cloud">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="environment" content="<%= Rails.env %>">
+  <meta name="keywords" content="scalechamp, dbaas, postgresql, redis, mysql, keydb, vultr, aws, gcp, azure, digitalocean, alibabacloud, hetznercloud, linode, exoscale">
+  <meta name="user" content="<%= u(@current_user.to_json) %>">
+  <meta property="og:site_name" content="ScaleChamp">
+  <meta property="og:title" content="ScaleChamp Cloud">
+  <meta property="og:description" content="ScaleChamp Control Panel">
+  <meta property="og:url" content="https://cloud.scalechamp.com">
+  <meta property="og:type" content="website">
+  <%= stylesheet_pack_tag 'dashboard', media: 'all' %>
+  <% flash.each do |name, _| %>
+    <meta name="flash" content="<%= u(name) %>">
+  <% end %>
+</head>
+<body>
+  <noscript>This page is intended to work with JavaScript enabled only!</noscript>
+  <%= yield %>
+</body>
+</html>

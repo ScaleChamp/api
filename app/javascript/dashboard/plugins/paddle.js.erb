@@ -1,0 +1,20 @@
+window.Paddle.Setup({
+  vendor: <%= Rails.application.credentials.fetch(:paddle_vendor_id).to_json %>
+})
+
+export default {
+  install (Vue) {
+    Vue.prototype.$paddle = {
+      open (override, loadCallback) {
+        return new Promise((resolve, reject) => {
+          window.Paddle.Checkout.open({
+            override,
+            successCallback: resolve,
+            closeCallback: reject,
+            loadCallback
+          })
+        })
+      }
+    }
+  }
+}

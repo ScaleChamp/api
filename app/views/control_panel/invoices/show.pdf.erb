@@ -1,0 +1,37 @@
+<div>
+  <div>
+    <h1>Invoice</h1>
+    <p>From ScaleChamp Ltd</p>
+    <p>To <%= @project.name %></p>
+  </div>
+  <div>
+    <h2>Summary</h2>
+    <hr>
+    <p>Total due: <%= number_to_currency(@invoice.total) %></p>
+    <hr>
+  </div>
+  <div>
+    <h2>Product usage charges</h2>
+    <p>Detailed usage information is available via the API or can be downloaded from the billing section of your account</p>
+    <table>
+      <tr>
+        <th>Instance</th>
+        <th>Plan</th>
+        <th>Hours</th>
+        <th>Start</th>
+        <th>End</th>
+        <th><%= number_to_currency(@invoice.total) %></th>
+      </tr>
+      <% @invoice.items.each do |item| %>
+        <tr>
+          <td><%= item['id'][0...8] %></td>
+          <td><%= item['plan'] %></td>
+          <td><%= item['hours'] %></td>
+          <td><%= item['start'].to_datetime.strftime('%m-%y %H:%M') %></td>
+          <td><%= item['end'].to_datetime.strftime('%m-%y %H:%M') %></td>
+          <td><%= number_to_currency(item['price']) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
